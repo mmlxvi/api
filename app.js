@@ -5,9 +5,11 @@ var player;
 //the question is: what do i put in this function? everything i need to load a
 //random video is set out below the document.ready function. how can i plug in
 //the "onPlayerReady()" function when the #channelChanger button is clicked?
+//The alert in the function immediately below is just to show that the
+//button is in fact connected and working.
 
 $('#channelChanger').click(function() {
-
+  alert('testing');
 
 })
 
@@ -60,10 +62,11 @@ $('#channelChanger').click(function() {
 //  5. The API calls this function when the player's state changes.
   // The function indicates that when playing a video (state=1),
   // the player should play for six seconds and then stop.
-  var done = false;
+
+   var done = false;
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(stopVideo, 10000);
+      setTimeout(stopVideo, 12000);
       done = true;
     }
   }
